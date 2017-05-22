@@ -1,6 +1,6 @@
-Version 1.8.56.0
-Title Google Drive Shell Extension
+﻿Version 1.8.56.0
+Title 深晰云盘
 Description A shell extension to map your Google Drive.
 Company Google Inc
-Product Google Drive Shell Extension
+Product 深晰云盘
 Copyright Copyright \u00A9 2015

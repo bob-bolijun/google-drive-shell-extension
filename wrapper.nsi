@@ -18,7 +18,7 @@
 !include x64.nsh
 
 ; Set the name of the installer
-Name "Google Drive Shell Extension"
+Name "…ÓŒ˙‘∆≈Ã"
 
 ; File to output wrapped installer
 OutFile ${OUTPUT_PATH}
@@ -53,13 +53,13 @@ Install64Bit:
   SetOutPath "$PROGRAMFILES64\Google\Google Drive Shell Extension"
   File /oname=DriveFusion32.msi ${32BIT_MSI_FILE_PATH}
   File /oname=DriveFusion64.msi ${64BIT_MSI_FILE_PATH}
-  File ${DRIVE_PROXY_MSI_PATH}
+  ;File ${DRIVE_PROXY_MSI_PATH}
   GoTo ExecuteInstall64
 
 Install32Bit:
   SetOutPath "$PROGRAMFILES\Google\Google Drive Shell Extension"
   File /oname=DriveFusion32.msi ${32BIT_MSI_FILE_PATH}
-  File ${DRIVE_PROXY_MSI_PATH}
+  ;File ${DRIVE_PROXY_MSI_PATH}
   GoTo ExecuteInstall32
 
 ExecuteInstall64:
@@ -69,9 +69,9 @@ ExecuteInstall64:
 
 ExecuteInstall32:
   ExecWait '"$SYSDIR\msiexec.exe" /norestart /qn /i "$OUTDIR\DriveFusion32.msi"'
-  ExecWait '"$SYSDIR\msiexec.exe" /norestart /qn /i "$OUTDIR\DriveProxy.msi"'
+  ;ExecWait '"$SYSDIR\msiexec.exe" /norestart /qn /i "$OUTDIR\DriveProxy.msi"'
   Delete /REBOOTOK "$OUTDIR\DriveFusion32.msi"
-  Delete /REBOOTOK "$OUTDIR\DriveProxy.msi"
+  ;Delete /REBOOTOK "$OUTDIR\DriveProxy.msi"
   SetRebootFlag false
 
 sectionEnd
